@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{range .}}
+
+    Academic Year - {{.AcaYear}}
+    Term: {{.Fall.Term}}
+    Courses:
+    {{range .Fall.Courses}}
+        Course number: {{.Number}}
+        Course Name: {{.Name}}
+        Course Units: {{.Units}}
+    {{end}}
+
+    Term: {{.Spring.Term}}
+    Courses:
+    {{range .Spring.Courses}}
+        Course number: {{.Number}}
+        Course Name: {{.Name}}
+        Course Units: {{.Units}}
+    {{end}}
+{{end}}
+
+</body>
+</html>
